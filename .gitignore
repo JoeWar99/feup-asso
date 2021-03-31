@@ -1,4 +1,4 @@
-Projects/*
-Projects
+Repositories/*
+!Repositories/.gitkeep
 out
 node_modules

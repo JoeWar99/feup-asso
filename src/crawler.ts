@@ -1,11 +1,9 @@
-import { debug } from "node:console";
-
 const path = require("path");
 const fs = require("fs");
 const process = require("process");
 const linesCount = require("file-lines-count");
 
-const repositoryFolder = "Projects";
+const repositoryFolder = "Repositories";
 const supportFileExtensions: Array<String> = ["java", "js", "ts"];
 
 function crawl(repositoryName: String) {
@@ -29,13 +27,20 @@ async function visitDirectory(currentPath: String) {
             return;
           }
 
-          const fileNameSplit: Array<String> = file.split(".");
-          const fileExtension = fileNameSplit[fileNameSplit.length - 1];
+          // If the file being considered is indeed a file
+          if (stat.isFile()) {
+            // Find the file extension
+            const fileNameSplit: Array<String> = file.split(".");
+            const fileExtension = fileNameSplit[fileNameSplit.length - 1];
 
-          if (stat.isFile() && supportFileExtensions.includes(fileExtension)) {
-            const lines = await linesCount(path.join(currentPath, file));
-            console.log(`${file} has ${lines} lines`);
-          } else if (stat.isDirectory()) {
+            //Check if the file extension is supported by the crawler
+            if (supportFileExtensions.includes(fileExtension)) {
+              const lines = await linesCount(path.join(currentPath, file));
+              console.log(`${file} has ${lines} lines`);
+            }
+          }
+          // If the file being considered is a directory
+          else if (stat.isDirectory()) {
             visitDirectory(path.join(currentPath, file));
           }
         }
