@@ -1,7 +1,3 @@
-const world = "world";
+import { crawl } from "./crawler";
 
-export function hello(word: string = world): string {
-  return `Hello ${world}! `;
-}
-
-console.log(hello("world"));
+crawl("aiad-conquest-master");

@@ -1,3 +1,4 @@
-./Projects
-./out
-./node_modules
+Projects/*
+Projects
+out
+node_modules

@@ -1,0 +1,26 @@
+{
+  "name": "feup-asso",
+  "version": "1.0.0",
+  "description": "Git repositroy for 4th year course ASSO. MIEIC FEUP 2020/2021",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LockDownPT/feup-asso.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LockDownPT/feup-asso/issues"
+  },
+  "homepage": "https://github.com/LockDownPT/feup-asso#readme",
+  "dependencies": {
+    "file-lines-count": "^1.0.1",
+    "typescript": "^4.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.37"
+  }
+}
