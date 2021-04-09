@@ -5,7 +5,6 @@ const fs = require("fs");
 const process = require("process");
 const linesCount = require("file-lines-count");
 
-const repositoryFolder = "Repositories";
 const supportFileExtensions: Array<string> = ["java", "js", "ts"];
 
 export class MetricAnalyser implements Analyser {
