@@ -4,7 +4,9 @@
   "description": "Git repositroy for 4th year course ASSO. MIEIC FEUP 2020/2021",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-typescript": "tsc",
+    "start": "npm run compile-typescript && node ./out/index.js"
   },
   "repository": {
     "type": "git",
